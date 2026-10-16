@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejercicio 2 · Tarjeta de presentación</title>
+
+  <!-- CSS de Bootstrap 5.3.8 (CDN) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       EJERCICIO 2 · Tarjeta de presentación
+       Objetivo: dar estilo SOLO con clases de utilidad (sin CSS propio)
+       ============================================================ -->
+
+  <!-- PASO 1: contenedor con relleno vertical (py-5), título grande (display-4)
+               y subtítulo destacado (lead) -->
+
+  <div class="container py-5">
+  <!-- Titulo grande -->
+  <h1>Dany Megias Maya</h1>
+  <h1 class="display-4">Dany Megias Maya</h1>
+  <h2>Alumno de Desarrollo Web</h2>
+  <h2 class="display-4">Dany Megias Maya</h2>
+  <h2 class="lead">Alumno de Desarrollo Web</h2>
+
+  </div>
+
+  <!-- PASO 2: separador <hr> y un párrafo con palabras resaltadas -->
+  <hr>
+  <p>Me dedico a los <strong>estudios</strong></p>
+  <hr class="my-4">
+  <p>Me apasiona el <mark>desarrollo web</mark>y la <span class="text-success fw-semibold">interfaz de usuario</span></p>
+
+
+  <!-- PASO 3: caja de aviso con fondo suave, borde y esquinas redondeadas -->
+
+  <div class="mb-5 p-3 bg-warning-subtle border border-success rounded-3">
+    Atención: no olvides repasar los conceptos de Bootstrap.
+  </div>
+
+  <!-- PASO 4: dos botones separados con margen a la derecha (me-2) -->
+
+  <hr class="my-4">
+  <a href="#" class="btn">Ver Portfolio</a>
+
+  <p></p>
+  <a href="#" class="btn btn-dark me-2">Ver Portfolio</a>
+  <a href="#" class="btn btn-outline-dark">Descargar CV</a>
+
+
+  <!-- RETO: añade data-bs-theme="dark" a la etiqueta <html> -->
+
+  <!-- Botón para volver al índice del proyecto (puedes dejarlo) -->
+  <a href="../index.html" class="btn btn-sm btn-outline-secondary position-fixed bottom-0 end-0 m-3 z-3">← Índice</a>
+
+  <!-- JS de Bootstrap (incluye Popper). Siempre al final del body -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

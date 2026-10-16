@@ -1,0 +1,17 @@
+/* ============================================================
+   Estilos propios del portfolio (marca personal)
+   Usa el mínimo CSS posible: primero intenta con clases de Bootstrap.
+   ============================================================ */
+
+/* Ejemplo: cambia el color principal de Bootstrap por el tuyo
+:root {
+  --bs-primary: #0d6efd;
+  --bs-primary-rgb: 13, 110, 253;
+}
+*/
+
+/* Desplazamiento suave al pulsar los enlaces del menú */
+html { scroll-behavior: smooth; }
+
+/* Que el título de cada sección no quede tapado por la navbar fija */
+section { scroll-margin-top: 70px; }
