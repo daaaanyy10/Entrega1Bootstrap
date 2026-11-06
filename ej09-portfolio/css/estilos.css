@@ -1,17 +1,110 @@
-/* ============================================================
-   Estilos propios del portfolio (marca personal)
-   Usa el mínimo CSS posible: primero intenta con clases de Bootstrap.
-   ============================================================ */
+/* =====================================================
+   estilos.css - Portfolio de Dany Megías Maya
+   Va después de Bootstrap. Solo lo que Bootstrap no hace.
+   ===================================================== */
 
-/* Ejemplo: cambia el color principal de Bootstrap por el tuyo
+/* ---------- 1. VARIABLES DE MARCA (tema claro) ---------- */
 :root {
-  --bs-primary: #0d6efd;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary: #1d4ed8;
+  --bs-primary-rgb: 29, 78, 216;
+  --bs-link-color: #1d4ed8;
+  --bs-link-color-rgb: 29, 78, 216;
+  --bs-link-hover-color: #1e40af;
+  --bs-link-hover-color-rgb: 30, 64, 175;
+  --bs-body-font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --color-foco: #1d4ed8;
+  --color-borde-campo: #6c757d;
 }
-*/
 
-/* Desplazamiento suave al pulsar los enlaces del menú */
-html { scroll-behavior: smooth; }
+/* ---------- 2. TEMA OSCURO ---------- */
+/* Mismos colores de marca pero más claros para que el contraste sea >= 4,5:1 */
+[data-bs-theme="dark"] {
+  --bs-link-color: #8fb0ff;
+  --bs-link-color-rgb: 143, 176, 255;
+  --bs-link-hover-color: #b6ccff;
+  --bs-link-hover-color-rgb: 182, 204, 255;
+  --color-foco: #8fb0ff;
+  --color-borde-campo: #adb5bd;
+}
 
-/* Que el título de cada sección no quede tapado por la navbar fija */
-section { scroll-margin-top: 70px; }
+/* ---------- 3. BOTONES (Bootstrap no usa --bs-primary en los botones) ---------- */
+.btn-primary {
+  --bs-btn-bg: #1d4ed8;
+  --bs-btn-border-color: #1d4ed8;
+  --bs-btn-hover-bg: #1e40af;
+  --bs-btn-hover-border-color: #1e3a8a;
+  --bs-btn-active-bg: #1e3a8a;
+  --bs-btn-active-border-color: #1e3a8a;
+  --bs-btn-disabled-bg: #1d4ed8;
+  --bs-btn-disabled-border-color: #1d4ed8;
+  --bs-btn-focus-shadow-rgb: 29, 78, 216;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #1d4ed8;
+  --bs-btn-border-color: #1d4ed8;
+  --bs-btn-hover-bg: #1d4ed8;
+  --bs-btn-hover-border-color: #1d4ed8;
+  --bs-btn-active-bg: #1e3a8a;
+  --bs-btn-active-border-color: #1e3a8a;
+  --bs-btn-focus-shadow-rgb: 29, 78, 216;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary {
+  --bs-btn-color: #8fb0ff;
+  --bs-btn-border-color: #8fb0ff;
+  --bs-btn-hover-color: #fff;
+}
+
+/* ---------- 4. ACCESIBILIDAD ---------- */
+/* Foco visible en todos los elementos interactivos */
+a:focus-visible,
+.btn:focus-visible,
+.navbar-toggler:focus-visible,
+.accordion-button:focus-visible,
+.form-control:focus-visible,
+.btn-close:focus-visible {
+  outline: 3px solid var(--color-foco);
+  outline-offset: 2px;
+}
+
+/* Bordes de los campos con contraste >= 3:1 */
+.form-control {
+  border-color: var(--color-borde-campo);
+}
+
+/* Mensajes de error con buen contraste */
+.invalid-feedback {
+  color: #b02a37;
+}
+
+[data-bs-theme="dark"] .invalid-feedback {
+  color: #ea868f;
+}
+
+/* ---------- 5. SECCIONES ---------- */
+/* Para que el navbar fijo no tape el título al hacer clic en un enlace */
+.seccion {
+  scroll-margin-top: 4.5rem;
+}
+
+/* ---------- 6. PORTADA ---------- */
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+/* ---------- 7. PROYECTOS ---------- */
+.imagen-proyecto {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* ---------- 8. RESPONSIVE (mismos breakpoints que Bootstrap) ---------- */
+@media (min-width: 768px) {
+  .avatar {
+    width: 13rem;
+    height: 13rem;
+  }
+}
